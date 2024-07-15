@@ -1,0 +1,89 @@
+---
+// Import header and footer to each page making it easier for the user to navigate between each page.
+import Mainlayout from "../../layouts/secondary-header.astro";
+
+// Sets the company name.
+let companyname = 'Whispering Woods';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Meta Tags. -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Title in the tab bar. -->
+        <title>{companyname} - Direction/Hours</title>
+
+        <!-- This code is from Summit Media for a marketing campaign. -->
+        <!-- Do not edit this section of code. Could interfear with something on Summit Media's end. -->
+        <!-- Google Tag Manager -->
+        <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-KB24MHNG');</script>
+
+        <!-- Icon image to each page -->
+        <link rel="icon" 
+            type="image/x-icon" 
+            href="/images/logos/CroppedLogo2Black.png"
+        />
+    </head>
+
+    <style>
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+
+    <body>
+
+        <!-- This code is from Summit Media for a marketing campaign. -->
+        <!-- Do not edit this section of code. Could interfear with something on Summit Media's end. -->
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KB24MHNG"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+        <!-- Import header and footer to each page making it easier for the user to navigate between each page. -->
+        <!-- This is the secondary header which is used on all pages beside the index.astro page. -->
+        <Mainlayout>
+
+            <div class="container">
+                <br>
+
+                <h2><b>Direction & Hours:</b></h2>
+
+                <hr>
+
+                <p><b>Address:</b> 3001 Macineery Dr, Council Bluffs, IA 51501</p>
+                <p><b>Phone:</b> <a href="tel:7123664653"><u>(712) 366-4653</a></u></p>
+
+                <br>
+
+                <h2><b>Hours:</b></h2>
+
+                <hr>
+
+                <p><b>Sunday:</b> 7am - 5pm.</p>
+                <p><b>Monday:</b> 10am - 5pm.</p>
+                <p><b>Tuesday:</b> 8am - 5pm.</p>
+                <p><b>Wednesday:</b> 8am - 5pm.</p>
+                <p><b>Thursday:</b> 8am - 5pm.</p>
+                <p><b>Friday:</b> 8am - 5pm.</p>
+                <p><b>Saturday:</b> 7am - 5pm.</p>
+
+                <br>
+
+                <p><b><i>*Hours may very between the months of October through April*</i></b></p>
+
+                <!-- TODO: Talk to Wyatt, Tony and Davis about what information wants to be put here. -->
+            </div>
+
+        </Mainlayout>
+
+    </body>
+</html>

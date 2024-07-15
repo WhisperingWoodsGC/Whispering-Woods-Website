@@ -1,0 +1,96 @@
+---
+// Import header and footer to each page making it easier for the user to navigate between each page.
+import Mainlayout from "../../layouts/secondary-header.astro";
+
+// Sets the company name.
+let companyname = 'Whispering Woods';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Meta Tags. -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Title in the tab bar. -->
+        <title>{companyname} - Course Rates</title>
+
+        <!-- This code is from Summit Media for a marketing campaign. -->
+        <!-- Do not edit this section of code. Could interfear with something on Summit Media's end. -->
+        <!-- Google Tag Manager -->
+        <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-KB24MHNG');</script>
+
+        <!-- Icon image to each page -->
+        <link rel="icon" 
+            type="image/x-icon" 
+            href="/images/logos/CroppedLogo2Black.png"
+        />
+    </head>
+    
+    <body>
+        <!-- This code is from Summit Media for a marketing campaign. -->
+        <!-- Do not edit this section of code. Could interfear with something on Summit Media's end. -->
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KB24MHNG"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+        <!-- Import header and footer to each page making it easier for the user to navigate between each page. -->
+        <!-- This is the secondary header which is used on all pages beside the index.astro page. -->
+        <Mainlayout>
+
+            <div class="container">
+                <br>
+                <h2><b>Course Rates:</b></h2>
+
+                <hr>
+
+                <p>Tee times can be made up to 7 days in advance.</p>
+                <p>Practice balls are included with the round of golf 30 minutes prior to tee times.</p>
+
+                <br>
+
+                <p><b>Monday - Thursday:</b></p>
+
+                <p>18 Holes Green Fee with cart: $50.</p>
+                <p>9 Hole Green Fee with cart: $35.</p>
+
+                <br>
+
+                <p><b>Friday - Sunday & Holidays:</b></p>
+
+                <p>18 Holes Green Fee with cart: $55.</p>
+
+                <br>
+
+                <p><b>Senior/Junior:</b></p>
+
+
+                <p>18 Holes Green Fee with cart: $35 Monday-Friday before 2:00pm.</p>
+
+                <br>
+
+                <p><b>Rental Clubs:</b></p>
+
+                <p>$40 per set(Tour Edge).</p>
+
+                <br>
+
+                <p><b>Range Passes:</b></p>
+                <p>Avaliable Tuesday - Friday: $20 1 hour pass or $33 day pass.</p>
+
+                <br>
+
+                <p><b><i>*Military: $5 off rack rate.*</i></b></p>
+                <p><b><i>*All Prices above include applicable taxes.*</i></b></p>
+            </div>
+
+        </Mainlayout>
+        
+    </body>
+</html>

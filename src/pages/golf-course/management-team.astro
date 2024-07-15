@@ -1,0 +1,161 @@
+---
+// Import header and footer to each page making it easier for the user to navigate between each page.
+import Mainlayout from "../../layouts/secondary-header.astro";
+
+// Sets the company name.
+let companyname = 'Whispering Woods';
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Meta Tags. -->
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Title in the tab bar. -->
+        <title>{companyname} - Management Team</title>
+
+        <!-- Icon image to each page -->
+        <link rel="icon" 
+            type="image/x-icon" 
+            href="/images/logos/CroppedLogo2Black.png"
+        />
+    </head>
+
+    <style>
+        
+        /* Styling for scrolling animation. */
+        .hidden {
+            opacity: 0;
+            filter: blur(5px);
+            transform: translateX(-100%);
+            transition: all 1s;
+        }
+
+        .show {
+            opacity: 1;
+            filter: blur(0);
+            transform: translateX(0)
+        }
+    </style>
+
+    <script>
+        // Script added: May 6th 2024:
+        // Found: https://www.youtube.com/watch?v=T33NN_pPeNI
+
+        // Scrolling animation.
+        const observer = new IntersectionObserver((entries) => {
+
+            // Can observe multiple entries all at the same time.
+            // Because of this, you do for each to grab each entry.
+            entries.forEach((entry) => {
+                console.log(entry)
+
+                // Checks to see if the entry is within the viewport.
+                if (entry.isIntersecting) {
+
+                    // Will make the class visible.
+                    entry.target.classList.add('show');
+                } else {
+
+                    // Will make the class not-visible.
+                    entry.target.classList.remove('show');
+                }
+            });
+        });
+
+        // Grabs all of the elements within the document that have the class '.hidden'.
+        const hiddenElements = document.querySelectorAll('.hidden');
+        hiddenElements.forEach((el) => observer.observe(el));
+    </script>
+
+    <body>
+
+        <!-- Import header and footer to each page making it easier for the user to navigate between each page. -->
+        <!-- This is the secondary header which is used on all pages beside the index.astro page. -->
+        <Mainlayout>
+
+            <div class="container">
+                <br />
+
+                <h2><b>Management Team:</b></h2>
+
+                <hr />
+
+                <div class="row">
+                    <div class="card-group">
+
+                        <div class="card hidden">
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-2 text-muted">Director of Golf</h6>
+                                <p class="card-text"></p>
+                            </div>
+                        </div>
+                        <div class="card hidden">
+                            <div class="card-body">
+                                <h5 class="card-title">Ben Starkel</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Superintendent</h6>
+                                <p class="card-text"></p>
+                            </div>
+                        </div>
+                        <div class="card hidden">
+                            <div class="card-body">
+                                <h5 class="card-title">Davis Garner</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">General Manager</h6>
+                                <p class="card-text">Davis, from Utah has a rich history in golf. His journey began in college, where he played golf at various levels, 
+                                    demonstrating both skill and passion for the game. These experiences laid the groundwork for a lifelong career in the golf industry.</p>
+                                <p>His dedication to the sport and the industry has not only enriched his professional life but also enabled him to gather an array of invaluable 
+                                    insights and expertise. Today, he brings all of this to our team, leveraging his deep understanding of the sport to enhance our operations 
+                                    and services.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <br>
+                    
+                <div class="row">
+                    <div class="card-group">
+
+                        <div class="card hidden">
+                            <div class="card-body">
+                                <h5 class="card-title">Taylor Johnson</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Assistant Golf Professional</h6>
+                                <p class="card-text">Taylor Johnson is a proud native of Council Bluffs, Iowa. With a strong 
+                                    connection to the local community.
+                            Taylor is a familiar face here at {companyname}.</p>
+                                <p>Notably, Taylor recently achieved a significant milestone by graduating from 
+                                    Concordia University in Seward, Nebraska. Taylor's dedication and hard work paid off as he earned a degree in Information Technology, 
+                                    equipping him with the necessary knowledge and skills to thrive in the ever-evolving tech industry.</p>
+                                <p>Looking ahead, Taylor has exciting plans to further develop his professional journey. In the near future, he will be embarking 
+                                    on an exciting new chapter by joining the PGA Apprenticeship program. This program will provide Taylor with invaluable opportunities 
+                                    to enhance his abilities and pursue his passion for golf.</p>
+                            </div>
+                        </div>
+
+                        <div class="card hidden">
+                            <div class="card-body">
+                                <h5 class="card-title">Jordan Greenwood</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Assistant Golf Professional</h6>
+                                <p class="card-text">Jordan Greenwood is a native of Council Bluffs, Iowa. With a couple years of experience within the golf world. 
+                                    Jordan looks to help make Whispering Woods a better place.</p>
+                                <p>Jordan attended Buena Vista Univeristy for a small amount of time while also playing on their golf team. Jordan's talent on and
+                                    off the golf course could be extremely useful for us in the future.</p>
+                            
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <br>
+
+            </div>
+
+        </Mainlayout>
+
+    </body>
+</html>

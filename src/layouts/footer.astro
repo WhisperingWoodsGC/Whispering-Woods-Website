@@ -1,0 +1,57 @@
+---
+//Imports the Social Media Icons from the components.
+import Socialmediaicons from "../components/socialmediaicons.astro";
+
+// Sets the company name.
+let companyname = 'Whispering Woods';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Meta Tags. -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Imports Font Awesome Icons into webpage to allow different icons to be pulled. -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <style>
+        hr {
+            border-width: 2px;
+        }
+        
+    </style>
+    
+
+    <body>
+        <!-- Footer at the bottom of every page. -->
+        <footer class="footer mt-auto">
+            <div class="bg-light">
+                <br>
+                
+                <!-- Social media and extra information. -->
+                <div class="container align-item-center">
+                    <div class="row">
+
+                        <hr>
+
+                        <div class="d-flex flex-column flex-sm-row justify-content-between">
+                            <div class="col">
+                                <p>Designed by Taylor Johnson </p>
+                                <p>{companyname} | Council Bluffs, Iowa.</p>
+                            </div>
+
+                            <!-- Pulls Social Media Icons from "/components/socialmediaicons". -->
+                            <Socialmediaicons />
+                            
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </body>
+</html>

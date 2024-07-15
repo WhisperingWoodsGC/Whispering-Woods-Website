@@ -1,0 +1,66 @@
+---
+// Import header and footer to each page making it easier for the user to navigate between each page.
+import Mainlayout from "../../layouts/secondary-header.astro";
+
+// Sets the company name.
+let companyname = "Whispering Woods";
+
+// Import each hole from "../../components/course-overview/" 
+import Hole10 from "../../components/course-overview/hole10.astro";
+import Hole12 from "../../components/course-overview/hole12.astro";
+import Hole13 from "../../components/course-overview/hole13.astro";
+import Hole14 from "../../components/course-overview/hole14.astro";
+import Hole15 from "../../components/course-overview/hole15.astro";
+import Hole16 from "../../components/course-overview/hole16.astro";
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Meta Tags. -->
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Title in the tab bar. -->
+        <title>{companyname} - Course Overview</title>
+
+        <!-- Icon image to each page -->
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="/images/logos/CroppedLogo2Black.png"
+        />
+    </head>
+    <body>
+        <!-- Import header and footer to each page making it easier for the user to navigate between each page. -->
+        <!-- This is the secondary header which is used on all pages beside the index.astro page. -->
+        <Mainlayout>
+            <div class="container">
+                <br />
+                
+                <h2><b>Course Overview:</b></h2>
+
+                <hr />
+
+                <!-- Hole 10 Information. -->
+                <Hole10/>
+
+                <!-- Hole 12 Information. -->
+                <Hole12/>
+
+                <!-- Hole 13 Information. -->
+                <Hole13/>
+
+                <!-- Hole 14 Information. -->
+                <Hole14/>
+
+                <!-- Hole 15 Information. -->
+                <Hole15/>
+
+                <!-- Hole 16 Information -->
+                <Hole16/>
+
+        </Mainlayout>
+    </body>
+</html>
