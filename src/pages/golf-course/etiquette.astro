@@ -17,12 +17,25 @@ let companyname = 'Whispering Woods';
         <!-- Title in the tab bar. -->
         <title>{companyname} - Etiquette</title>
 
-        <!-- Icon image to each page -->
-        <link rel="icon" 
-            type="image/x-icon" 
-            href="/images/logos/CroppedLogo2Black.png"
-        />
+        <!-- Icon image on the tab of each page. -->
+        <link rel="icon" href="/images/logos/CroppedLogo2Black.png" media="(prefers-color-scheme: light)">
+        <link rel="icon" href="/images/logos/CroppedLogo2.png" media="(prefers-color-scheme: dark)">
+
     </head>
+
+    <style>
+        /* Determines if the logo in the tab of each page is black or white. */
+        body {
+            background-color: white; /* Light mode background */
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: black; /* Dark mode background */
+            }
+        }
+    </style>
+    
     <body>
 
         <!-- Import header and footer to each page making it easier for the user to navigate between each page. -->

@@ -17,15 +17,24 @@ let companyname = 'Whispering Woods';
         <!-- Title in the tab bar. -->
         <title>{companyname} - Management Team</title>
 
-        <!-- Icon image to each page -->
-        <link rel="icon" 
-            type="image/x-icon" 
-            href="/images/logos/CroppedLogo2Black.png"
-        />
+        <!-- Icon image on the tab of each page. -->
+        <link rel="icon" href="/images/logos/CroppedLogo2Black.png" media="(prefers-color-scheme: light)">
+        <link rel="icon" href="/images/logos/CroppedLogo2.png" media="(prefers-color-scheme: dark)">
+
     </head>
 
     <style>
-        
+        /* Determines if the logo in the tab of each page is black or white. */
+        body {
+            background-color: white; /* Light mode background */
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: black; /* Dark mode background */
+            }
+        }
+
         /* Styling for scrolling animation. */
         .hidden {
             opacity: 0;
@@ -84,23 +93,38 @@ let companyname = 'Whispering Woods';
 
                 <hr />
 
+                <!-- A row of bootstrap cards that use JavaScript to have scrolling animation. -->
+                <!-- More information can be found here for cards: https://getbootstrap.com/docs/5.3/components/card/#about -->
                 <div class="row">
                     <div class="card-group">
 
+                        <!-- Anthony Driscoll management team card using bootstrap. -->
                         <div class="card hidden">
+                            <img src="..." class="card-img-top" alt="...">
                             <div class="card-body">
+                                <h5 class="card-title">Anthony Driscoll</h5>
                                 <h6 class="card-subtitle mb-2 text-muted">Director of Golf</h6>
-                                <p class="card-text"></p>
+                                <p class="card-text">Anthony Driscoll is a golf professional based in Omaha, Nebraska. He earned his PGA membership in 2011 and has over a decade 
+                                    of experience within the Nebraska PGA section. Anthony is a PGA Reach board member and graduated from the University of Nebraska's PGM (Professional 
+                                    Golf Management) Program.</p>
+                                <p class="card-text">With 25 years of experience in teaching, operations, and maintenance, Anthony is a versatile asset in the golfing community. He 
+                                    initiated the first tee program in Omaha, demonstrating his commitment to nurturing young talent and promoting the sport.</p>
                             </div>
                         </div>
+
+                        <!-- Ben Starkel management team card using bootstrap. -->
                         <div class="card hidden">
+                            <img src="..." class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Ben Starkel</h5>
                                 <h6 class="card-subtitle mb-2 text-muted">Superintendent</h6>
                                 <p class="card-text"></p>
                             </div>
                         </div>
+
+                        <!-- Davis Garners mangement team card using bootstrap. -->
                         <div class="card hidden">
+                            <img src="..." class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Davis Garner</h5>
                                 <h6 class="card-subtitle mb-2 text-muted">General Manager</h6>
@@ -117,10 +141,14 @@ let companyname = 'Whispering Woods';
 
                 <br>
                     
+                <!-- A row of bootstrap cards that use JavaScript to have scrolling animation. -->
+                <!-- More information can be found here for cards: https://getbootstrap.com/docs/5.3/components/card/#about -->
                 <div class="row">
                     <div class="card-group">
 
+                        <!-- Taylor Johnson's management team card using bootstrap. -->
                         <div class="card hidden">
+                            <img src="/images/management-team/taylorjohnsonprofile.jpeg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Taylor Johnson</h5>
                                 <h6 class="card-subtitle mb-2 text-muted">Assistant Golf Professional</h6>
@@ -136,7 +164,9 @@ let companyname = 'Whispering Woods';
                             </div>
                         </div>
 
+                        <!-- Jordan Greenwood's management team card using bootstrap. -->
                         <div class="card hidden">
+                            <img src="/images/management-team/jordangreenwoodprofile.jpeg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Jordan Greenwood</h5>
                                 <h6 class="card-subtitle mb-2 text-muted">Assistant Golf Professional</h6>
