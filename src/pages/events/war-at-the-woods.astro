@@ -17,6 +17,17 @@ let companyname = 'Whispering Woods';
         <!-- Title in the tab bar. -->
         <title>{companyname} - War at The Woods</title>
 
+        <!-- Google tag manager for Sprout Marketing. -->
+        <!-- Google tag (gtag.js) -->
+        <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-7D8R29D991"></script>
+        <script is:inline>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-7D8R29D991');
+        </script>
+
         <!-- Icon image on the tab of each page. -->
         <link rel="icon" href="/images/logos/CroppedLogo2Black.png" media="(prefers-color-scheme: light)">
         <link rel="icon" href="/images/logos/CroppedLogo2.png" media="(prefers-color-scheme: dark)">
