@@ -1,0 +1,170 @@
+---
+// Import header and footer to each page making it easier for the user to navigate between each page.
+import Mainlayout from "../../layouts/secondary-header.astro";
+
+// Sets the company name.
+let companyname = 'Whispering Woods';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Meta Tags. -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Title in the tab bar. -->
+        <title>{companyname} - Memberships</title>
+
+        <!-- Google tag manager for Sprout Marketing. -->
+        <!-- Google tag (gtag.js) -->
+        <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-7D8R29D991"></script>
+        <script is:inline>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-7D8R29D991');
+        </script>
+
+        <!-- Icon image on the tab of each page. -->
+        <link rel="icon" href="/images/logos/CroppedLogo2Black.png" media="(prefers-color-scheme: light)">
+        <link rel="icon" href="/images/logos/CroppedLogo2.png" media="(prefers-color-scheme: dark)">
+
+    </head>
+
+    <style>
+        /* Determines if the logo in the tab of each page is black or white. */
+        body {
+            background-color: white; /* Light mode background */
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: black; /* Dark mode background */
+            }
+        }
+
+        img {
+            float: right;
+        }
+    </style>
+
+    <body>
+
+        <!-- This code is from Foreup for a marketing campaign. -->
+        <!-- Do not edit this section of code. Could interfear with something on Foreup's end. -->
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MTD2N6TB"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+        <!-- Import header and footer to each page making it easier for the user to navigate between each page. -->
+        <!-- This is the secondary header which is used on all pages beside the index.astro page. -->
+        <Mainlayout>
+
+            <div class="container">
+                <br>
+                <div class="d-flex justify-content-between align-items-center">
+                    <h3><b>Become a Member:</b></h3>
+                    <a class="nav-link" href="tel:7123664653">
+                        <button type="button" class="button btn btn-outline-dark">
+                            <span class="button-icon"><i class="bi bi-telephone"></i></span>
+                            <span class="button-space">|</span>
+                            <span class="button-text">Call to Join</span>
+                        </button>
+                    </a>
+                </div>
+
+                <hr>
+
+                <!-- TODO: NEEDS TO BE SHORTER! -->
+                <p>Joining Whispering Woods Golf Club has many advantages for both golf lovers and beginners. 
+                    As a member, you get to play on a high-quality golf course known for its great design. 
+                    It's a fun challenge for players at any skill level.</p>
+
+                <p>But Whispering Wood Golf Club isn't just about golf. It's a social hub where members can 
+                    meet new people and network. The club hosts events and tournaments that are not only fun 
+                    but also a way to make friends in a relaxed setting.</p>
+
+                <p>Members also have access to top-notch facilities. These include the clubhouse, pro shop, 
+                    and practice areas. The club always keeps these places in great shape for members to 
+                    enjoy.</p>
+
+                <p>There are also options for professional training. If you're a seasoned player wanting to 
+                    get better, or a newbie wanting to learn, the club has PGA professionals to help you. This focus 
+                    on helping members improve is another thing that makes the club special.</p>
+
+                <p>Joining Whispering Wood Golf Club isn't just about playing golf. It's about joining a 
+                    community of people who love the sport and enjoy the lifestyle that comes with it.</p>
+
+                <br>
+
+                <h3><b>Membership Pricing:</b></h3>
+
+                <hr>
+
+                <p><b>Single Membership:</b> $1,800.00.</p>
+
+                <p><b>Junior Executive:</b> $1,500.00.</p>
+
+                <p><b>Senior Membership:</b> $1,500.00.</p>
+
+                <p><b>Walking Membership</b> $1,000.00.</p>
+
+                <p><b>Junior Membership:</b> $500.00 <i>($105 off through 12/1)</i>.</p>
+
+                <p><b>Includes:</b></p>
+
+                <ul>
+                    <li>Unlimited golf with cart<i>(member cart fees applies to the walking membership)</i>.</li>
+                    <li>$300 facility fee.</li>
+                    <li>GHIN #.</li>
+                    <li>Member only tee times throughout the week.</li>
+                    <li>14 day advanced booking.</li>
+                    <li>Member pricing in the proshop.</li>
+                </ul>
+
+                <br>
+
+                
+                <div id="playerpass">
+                    <div class="d-flex flex-column flex-sm-row justify-content-between">
+                        <div class="col-sm-9">
+                            <h3><b>Player Pass: <i>(Limited Time Offer -> 12/1)</i></b></h3>
+                        </div>
+                        <div class="col-sm-3 d-flex justify-content-sm-end">
+                            <a class="nav-link" href="https://foreupsoftware.com/index.php/booking/22289/10326#/store">
+                                <button type="button" class="button btn btn-outline-dark">
+                                    <span class="button-icon"><i class="bi bi-calendar"></i></span>
+                                    <span class="button-space">|</span>
+                                    <span class="button-text">Buy your Player Pass</span>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+    
+                    <hr>
+    
+                    <p><b>Player Pass:</b> $300.00</p>
+    
+                    <p><b>Includes:</b></p>
+                        <ul>
+                            <li>10-free 18 hole rounds with a cart.</li>
+                            <li>Replay rate after the 10th round.</li>
+                            <li>Discounted rates for your group.</li>
+                            <li>14-day advanced booking.</li>
+                            <li>Member pricing in proshop.</li>
+                        </ul>
+    
+                    <br>
+                </div>
+                
+                    
+                
+            </div>
+
+        </Mainlayout>
+        
+    </body>
+</html>

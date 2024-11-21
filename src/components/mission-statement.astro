@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mission Statement</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* General styles for smooth scrolling */
+        html {
+            scroll-behavior: smooth; /* Enable smooth scrolling on the page */
+        }
+
+        /* Mission Statement Section */
+        .mission-statement-section {
+            position: relative;
+            background: url('/images/index/missionstatement.jpg') no-repeat center center/cover; /* Background image */
+            margin: 11px;
+            border-radius: 6px;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0; /* Start off as invisible */
+            transform: translateY(50px); /* Start the section slightly off-screen */
+            animation: slideIn 1s ease-out forwards; /* Add smooth animation */
+        }
+
+        /* Keyframes for slide-in animation */
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Overlay for the background image */
+        .mission-statement-section::before {
+            content: "";
+            position: absolute;
+            border-radius: 6px;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6); /* Darken the background */
+            z-index: 1;
+        }
+
+        /* The mission statement text container */
+        .mission-text-container {
+            text-align: center;
+            padding: 20px 40px;
+            background-color: rgba(255, 255, 255, 0.8); /* Light background for readability */
+            border-radius: 10px;
+            z-index: 2; /* Ensures it appears above the overlay */
+        }
+
+        .mission-text-container h2 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        .mission-text-container p {
+            font-size: 1.2rem;
+        }
+
+        /* Optional spacer between sections */
+        .spacer {
+            height: 10px;
+        }
+
+        /* Mobile-friendly styles */
+        @media (max-width: 768px) {
+            .mission-text-container {
+                padding: 15px;
+            }
+
+            .mission-text-container h2 {
+                font-size: 1.5rem;
+            }
+
+            .mission-text-container p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Spacer for section above -->
+    <div class="spacer"></div>
+
+    <!-- Mission Statement Section -->
+    
+        <div class="mission-statement-section ">
+            <div class="mission-text-container">
+                <h2>Our Mission Statement:</h2>
+                <p>We aim to create a positive impact in the world through innovative solutions and a commitment to excellence. Our mission is to empower individuals and organizations to achieve their fullest potential.</p>
+            </div>
+        </div>
+
+    </body>
+</html>

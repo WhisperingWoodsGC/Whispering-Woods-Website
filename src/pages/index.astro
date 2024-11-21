@@ -2,6 +2,13 @@
 // Import header and footer to each page making it easier for the user to navigate between each page.
 import HomepageLayout from "../layouts/homepage-layout.astro";
 
+import Alerts from "../components/alerts.astro";
+
+// Import three horizontal cards onto the index page.
+import IndexThreeCards from "../components/index-three-cards.astro";
+
+import MissionStatement from "../components/mission-statement.astro";
+
 // Sets the company name.
 let companyname = "Whispering Woods";
 ---
@@ -37,7 +44,7 @@ let companyname = "Whispering Woods";
     <style>
         /* Determines if the logo in the tab of each page is black or white. */
         body {
-            background-color: white; /* Light mode background */
+            background-color: lightgray; /* Light mode background */
         }
 
         @media (prefers-color-scheme: dark) {
@@ -45,9 +52,14 @@ let companyname = "Whispering Woods";
                 background-color: black; /* Dark mode background */
             }
         }
+
+        .card-img {
+            border-radius: 5px;
+        }
+        
     </style>
     
-    <body>
+    <body class="bg-light">
 
         <!-- This code is from Foreup for a marketing campaign. -->
         <!-- Do not edit this section of code. Could interfear with something on Foreup's end. -->
@@ -56,7 +68,16 @@ let companyname = "Whispering Woods";
             height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <!-- Import header and footer to each page making it easier for the user to navigate between each page. -->
-        <HomepageLayout />
+
+        <Alerts />
+        <HomepageLayout>
+
+            <!-- TODO: UPDATE PHOTOS ON INDEX CARDS, PUT IN MISSION STATEMENT AND UPDATE TO NEW PHOTO. -->
+            <!-- <IndexThreeCards />
+
+            <MissionStatement /> -->
+    
+        </HomepageLayout>
         
     </body>
 </html>

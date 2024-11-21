@@ -2,6 +2,8 @@
 // Imports the footer layout to the bottom of each page.
 import MainFooter from "./footer.astro";
 
+import Alerts from "../components/alerts.astro";
+
 //Imports the introduction video the the home-layout.
 import Introductionvideo from "../components/introductionvideo.astro";
 
@@ -178,7 +180,8 @@ import Introductionvideo from "../components/introductionvideo.astro";
                                     <a class="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown"
                                         aria-expanded="false">Golf Course</a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item bg-transparent" href="/golf-course/become-a-member">Become a Member</a></li>
+                                        <li><a class="dropdown-item bg-transparent" href="/golf-course/memberships">Memberships</a></li>
+                                        <li><a class="dropdown-item bg-transparent" href="/golf-course/memberships/#playerpass">Player Pass</a></li>
                                         <li><a class="dropdown-item bg-transparent" href="/golf-course/course-rates">Course Rates</a></li>
                                         <li><a class="dropdown-item bg-transparent" href="/golf-course/etiquette">Etiquette</a></li>
                                     </ul>
@@ -199,8 +202,7 @@ import Introductionvideo from "../components/introductionvideo.astro";
                                     <a class="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown"
                                         aria-expanded="false">Events</a>
                                     <ul class="dropdown-menu">
-                                        <!-- <li><a class="dropdown-item bg-transparent" href="/events/private-events-parties">Private Events/Parties</a></li> -->
-                                        <li><a class="dropdown-item bg-transparent" href="/events/war-at-the-woods">War at The Woods</a></li>
+                                        <li><a class="dropdown-item bg-transparent" href="/events/private-events-parties">Private Events/Parties</a></li>
                                     </ul>
                                 </li>
 
@@ -215,30 +217,6 @@ import Introductionvideo from "../components/introductionvideo.astro";
                                     </ul>
                                 </li>
                             </ul>
-
-                            <hr />
-
-                            <!-- Contact icons on the right hand side of the header. -->
-                            <nav class="navbar bg-transparent text-light">
-
-                                <!-- Phone icon with current phone number. -->
-                                <!-- User is able to click on icon/phone number to call the course. -->
-                                <a href="tel:7123664653" class="contact">
-                                    <i class="bi bi-telephone contact-icons"></i>
-                                    (712) 366-4653
-                                </a>
-
-                                <!-- Bar that will seperate both contact icons.  -->
-                                <div class=contact-bar>|</div>
-                                
-                                <!-- Mail icon with current email address. -->
-                                <!-- User is able to click on the icon/email address to contact the course. -->
-                                <a href="mailto:proshop@thewoodsgc.com" class="contact">
-                                    <i class="bi bi-envelope contact-icons"></i>
-                                    proshop@thewoodsgc.com                                
-                                </a>
-
-                            </nav>
 
                         </div>
                     </div>
