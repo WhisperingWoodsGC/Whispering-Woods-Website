@@ -1,5 +1,4 @@
 ---
-//Imports the Social Media Icons from the components.
 import Socialmediaicons from "../components/socialmediaicons.astro";
 
 // Sets the company name.
@@ -8,51 +7,170 @@ let companyname = 'Whispering Woods';
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Meta Tags. -->
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- Imports Font Awesome Icons into webpage to allow different icons to be pulled. -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
+    <!-- Imports Font Awesome Icons into webpage to allow different icons to be pulled. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <!-- Custom CSS for Footer -->
     <style>
         hr {
             border-width: 2px;
+            border-color: #ddd;
         }
-        
+
+        footer {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: inherit; /* Inherit the color from the parent (to avoid blue color) */
+        }
+
+        footer a:hover {
+            color: inherit; /* Ensure no color change on hover */
+        }
+
+        footer .social-icons {
+            font-size: 2rem; /* Larger icons */
+            display: flex;
+            gap: 15px;
+            justify-content: left;
+            align-items: left;
+        }
+
+        footer .social-icons i {
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        footer .social-icons i:hover {
+            transform: scale(1.1);
+            color: #007bff; /* Change color on hover */
+        }
+
+        footer .text-muted {
+            color: #6c757d;
+        }
+
+        footer .footer-wrapper {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        footer .col {
+            margin-bottom: 15px;
+        }
+
+        footer .social-media-links a {
+            color: #555;
+            font-size: 1.25rem;
+            margin-right: 20px;
+        }
+
+        footer .social-media-links a:hover {
+            color: #007bff;
+        }
+
+        /* Styled 'Designed by' section */
+        footer .designed-by {
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        footer .designed-by a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        footer .designed-by a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Layout for Footer */
+        @media (max-width: 768px) {
+            footer .d-flex {
+                flex-direction: column;
+                align-items: left;
+            }
+
+            footer .col {
+                text-align: left;
+            }
+
+            footer .social-icons {
+                justify-content: left;
+            }
+        }
     </style>
-    
-    <body>
-        <!-- Footer at the bottom of every page. -->
-        <footer class="footer mt-auto">
-            <div class="bg-light">
-                <br>
-                
-                <!-- Social media and extra information. -->
-                <div class="container align-item-center">
-                    <div class="row">
+</head>
+<body>
 
+    <!-- Footer Section -->
+    <footer class="footer mt-auto">
+        <div class="bg-light footer-wrapper">
+            <div class="container">
+                <div class="row">
+
+                    <!-- Company Information Section -->
+                    <div class="col-sm-8 col-md-4">
+                        <!-- Logo and Company Info -->
+                        <h5>Information:</h5>
                         <hr>
+                            <ul class="list-unstyled">
+                                <li>3001 Macineery Drive, Council Bluffs, Iowa</li>
+                                <li><i class="fa fa-phone"></i> <a href="tel:+1234567890">+1 (712) 366-4653</a></li>
+                                <li><i class="fa fa-envelope"></i> <a href="mailto:proshop@thewoodsgc.com">proshop@thewoodsgc.com</a></li>
+                            </ul>
+                        <br>
+                    </div>
 
-                        <div class="d-flex flex-column flex-sm-row justify-content-between">
-                            <div class="col">
-                                <p>Designed by Taylor Johnson</p>
-                                <p>{companyname} | Council Bluffs, Iowa.</p>
+                    <!-- Navigation Links Section -->
+                    <div class="col-sm-4 col-md-3">
+                        <h5>Quick Links:</h5>
+                        <hr>
+                        <ul class="list-unstyled">
+                            <li><a href="/golf-course/memberships">Memberships</a></li>
+                            <li><a href="/golf-course/course-rates">Course Rates</a></li>
+                            <li><a href="/events/private-events-parties">Private Events/Parties</a></li>
+                            <br>
+                        </ul>
+                    </div>
 
-                                
-                            </div>
-
-                            <!-- Pulls Social Media Icons from "/components/socialmediaicons". -->
+                    <!-- Enhanced Social Media Section -->
+                    <div class="col-sm-6 col-md-3 social-media-links">
+                        <h5>Follow Us!</h5>
+                        <hr>
+                        <div class="social-icons">
                             <Socialmediaicons />
-                            
                         </div>
+                        <br>
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <!-- Footer Bottom Section -->
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="text-muted small">&copy; 2024 {companyname}. All Rights Reserved.</p>
+                        <p class="designed-by">
+                            Website designed by <a href="/information/professional-staff/#taylorjohnson" target="_blank">Taylor Johnson</a>
+                        </p>
                     </div>
                 </div>
 
             </div>
-        </footer>
-    </body>
+        </div>
+    </footer>
+
+</body>
 </html>
