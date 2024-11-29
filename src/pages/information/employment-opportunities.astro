@@ -9,16 +9,15 @@ let companyname = 'Whispering Woods';
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- Meta Tags. -->
+        <!-- ! META TAGS. -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <!-- Title in the tab bar. -->
+
+        <!-- ! TAB TITLE. -->
         <title>{companyname} - Employment Opportunities</title>
 
-        <!-- Google tag manager for Sprout Marketing. -->
-        <!-- Google tag (gtag.js) -->
+        <!-- ! GOOGLE TAG MANAGER FOR SPROUT MARKETING. DON'T EDIT! -->
         <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-7D8R29D991"></script>
         <script is:inline>
             window.dataLayer = window.dataLayer || [];
@@ -28,12 +27,47 @@ let companyname = 'Whispering Woods';
             gtag('config', 'G-7D8R29D991');
         </script>
 
-        <!-- Icon image on the tab of each page. -->
+        <!-- ! TAG ICONS. -->
         <link rel="icon" href="/images/logos/CroppedLogo2Black.png" media="(prefers-color-scheme: light)">
         <link rel="icon" href="/images/logos/CroppedLogo2.png" media="(prefers-color-scheme: dark)">
 
     </head>
     <style>
+        /* Import Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto+Condensed:wght@400;600&display=swap');
+
+        /* Apply styles to all headings (h1, h2, h3, h4, h5, h6) */
+        h1, h2, h3 {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 800; /* Heavy */
+            font-size: 56pt; /* 75pt */
+            text-transform: uppercase; /* Uppercase text */
+            margin: 0; /* Optional: Remove default margin for headings */
+        }
+
+        h4, h5 {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 800; /* Heavy */
+            font-size: 28pt; /* 36pt */
+            text-transform: uppercase; /* Uppercase text */
+            margin: 0; /* Optional: Remove default margin for headings */
+        }
+
+        h6 {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 800; /* Heavy */
+            font-size: 21pt; /* 36pt */
+            text-transform: uppercase; /* Uppercase text */
+            margin: 0; /* Optional: Remove default margin for headings */
+        }
+
+        /* Apply styles to all paragraphs */
+        p, ul, span, a {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight: 400; /* Regular weight */
+            font-size: 14pt; /* 14pt */
+        }
+
         /* Determines if the logo in the tab of each page is black or white. */
         body {
             background-color: white; /* Light mode background */
@@ -55,25 +89,20 @@ let companyname = 'Whispering Woods';
     </style>
     <body>
         
-        <!-- This code is from Foreup for a marketing campaign. -->
-        <!-- Do not edit this section of code. Could interfear with something on Foreup's end. -->
-        <!-- Google Tag Manager (noscript) -->
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MTD2N6TB"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
-        <!-- Import header and footer to each page making it easier for the user to navigate between each page. -->
-        <!-- This is the secondary header which is used on all pages beside the index.astro page. -->
+        <!-- ! IMPORTS THE MAIN LAYOUT FROM "../LAYOUTS/SECONDARY-LAYOUT.ASTRO". -->
         <Mainlayout>
         
             <div class="container">
 
                 <br>
                 
-                <h2><b>Employment Opportunities - Join Our Team!</b></h2>
+                <h4><b>Employment Opportunities - Join Our Team!</b></h4>
                 <hr>
 
                 <div class="row">
                     <div class="col">
+
+                        <!-- TODO: NEEDS TO BE SHORTER -->
                         <p>We think you would be a great fit for our team at {companyname}. {companyname} is an attractive 18-hole golf
                             course located in Council Bluffs, Iowa. Our facility offers various amenities and services for golfers of 
                             all skill levels. As spring approaches, we are preparing to open our doors and welcome golfers from the metro.
@@ -85,12 +114,13 @@ let companyname = 'Whispering Woods';
                             but also a chance to be part of a vibrant and thriving golf community. We are excited about the upcoming season 
                             and look forward to the possibility of having you join us at {companyname}.</p>
                         </div>
+                        <!-- TODO: POSSIBLY ADD A PICTURE OF MOLLY OR ADDIE. -->
                 </div>
-                <!-- TODO: NEEDS TO BE SHORTER, ADD PHOTO OF MOLLY OR ADDIE. -->
+                
 
                 <br>
 
-                <h4><b>{companyname} Perks:</b></h4>
+                <h6><b>{companyname} Perks:</b></h6>
                 <hr>
                 <ul>
                     <li>Fun Environment</li>
@@ -100,13 +130,13 @@ let companyname = 'Whispering Woods';
 
                 <br>
 
-                <h4><b>Apply to work with us!</b></h4>
+                <h6><b>Apply to work with us!</b></h6>
                 <hr>
                 <p>If you are interested in working with us, we would highly appreciate it if you could take a moment to stop inside the clubhouse
                     to fill out an application. Your interest and effort in submitting the application will be greatly valued and 
                     considered in our selection process. Thank you for considering this opportunity to work with us!</p>
                 
-                <!-- TODO: IMPORT APPLICATION SO CUSTOMER CAN DOWNLOAD AND FILL OUT. -->
+                <!-- ! EMPLOYEMENT APPLICATION. -->
                 <a href="/documents/Employment Application.pdf">
                     <button type="button" class="btn btn-light">
                         <i class="bi bi-download"></i> Download

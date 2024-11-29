@@ -9,16 +9,15 @@ let companyname = 'Whispering Woods';
 <!doctype html>
 <html lang="en">
     <head>
-        <!-- Meta Tags. -->
+        <!-- ! META TAGS. -->
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!-- Title in the tab bar. -->
+        <!-- ! TAB TITLE. -->
         <title>{companyname} - Professional Staff</title>
 
-        <!-- Google tag manager for Sprout Marketing. -->
-        <!-- Google tag (gtag.js) -->
+        <!-- ! GOOGLE TAG MANAGER FOR SPROUT MARKETING. DON'T TOUCH! -->
         <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-7D8R29D991"></script>
         <script is:inline>
             window.dataLayer = window.dataLayer || [];
@@ -28,13 +27,48 @@ let companyname = 'Whispering Woods';
             gtag('config', 'G-7D8R29D991');
         </script>
 
-        <!-- Icon image on the tab of each page. -->
+        <!-- ! TAB ICONS. -->
         <link rel="icon" href="/images/logos/CroppedLogo2Black.png" media="(prefers-color-scheme: light)">
         <link rel="icon" href="/images/logos/CroppedLogo2.png" media="(prefers-color-scheme: dark)">
 
     </head>
 
     <style>
+        /* Import Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto+Condensed:wght@400;600&display=swap');
+
+        /* Apply styles to all headings (h1, h2, h3, h4, h5, h6) */
+        h1, h2, h3 {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 800; /* Heavy */
+            font-size: 56pt; /* 75pt */
+            text-transform: uppercase; /* Uppercase text */
+            margin: 0; /* Optional: Remove default margin for headings */
+        }
+
+        h4, h5 {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 800; /* Heavy */
+            font-size: 28pt; /* 36pt */
+            text-transform: uppercase; /* Uppercase text */
+            margin: 0; /* Optional: Remove default margin for headings */
+        }
+
+        h6 {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 800; /* Heavy */
+            font-size: 21pt; /* 36pt */
+            text-transform: uppercase; /* Uppercase text */
+            margin: 0; /* Optional: Remove default margin for headings */
+        }
+
+        /* Apply styles to all paragraphs */
+        p, ul, span, a {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight: 400; /* Regular weight */
+            font-size: 14pt; /* 14pt */
+        }
+
         /* Determines if the logo in the tab of each page is black or white. */
         body {
             background-color: white; /* Light mode background */
@@ -93,29 +127,22 @@ let companyname = 'Whispering Woods';
 
     <body>
 
-        <!-- This code is from Foreup for a marketing campaign. -->
-        <!-- Do not edit this section of code. Could interfear with something on Foreup's end. -->
-        <!-- Google Tag Manager (noscript) -->
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MTD2N6TB"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
-        <!-- Import header and footer to each page making it easier for the user to navigate between each page. -->
-        <!-- This is the secondary header which is used on all pages beside the index.astro page. -->
+        <!-- ! IMPORTS THE MAIN LAYOUT FROM "../LAYOUTS/SECONDARY-LAYOUT.ASTRO"-->
         <Mainlayout>
 
             <div class="container">
-                <br />
+                <br>
 
-                <h2><b>Professional Staff:</b></h2>
+                <h4><b>Professional Staff:</b></h2>
 
-                <hr />
+                <hr>
 
-                <!-- A row of bootstrap cards that use JavaScript to have scrolling animation. -->
-                <!-- More information can be found here for cards: https://getbootstrap.com/docs/5.3/components/card/#about -->
+                <!-- ! A ROW OF BOOTSTRAP CARDS THAT USE JAVASCRIPT TO HAVE A SCROLLING ANIMATION. -->
+                <!-- ! MORE INFORMATION CAN BE FOUND HERE FOR THE BOOTSTRAP CARDS: https://getbootstrap.com/docs/5.3/components/card/#about -->
                 <div class="row">
                     <div class="card-group">
 
-                        <!-- Anthony Driscoll management team card using bootstrap. -->
+                        <!-- ! ANTHONY DRISCOLL. -->
                         <div class="card hidden">
                             <img src="/images/management-team/anthonydriscoll.jpg" class="card-img-top" alt="Anthony Driscoll">
                             <div class="card-body">
@@ -131,7 +158,7 @@ let companyname = 'Whispering Woods';
                             </div>
                         </div>
 
-                        <!-- Davis Garners mangement team card using bootstrap. -->
+                        <!-- ! DAVIS GARNER. -->
                         <div class="card hidden">
                             <img src="/images/management-team/davisgarner.jpg" class="card-img-top" alt="Davis Garner">
                             <div class="card-body">
@@ -150,14 +177,15 @@ let companyname = 'Whispering Woods';
 
                 <br>
                     
-                <!-- A row of bootstrap cards that use JavaScript to have scrolling animation. -->
-                <!-- More information can be found here for cards: https://getbootstrap.com/docs/5.3/components/card/#about -->
+                <!-- ! TRANSPORTS THE USER FROM TAYLOR'S NAME ON THE FOOTER TO HERE. -->
                 <div id="taylorjohnson">
-                <div class="row">
-                    <div class="card-group">
 
-                        
-                            <!-- Taylor Johnson's management team card using bootstrap. -->
+                    <!-- ! A ROW OF BOOTSTRAP CARDS THAT USE JAVASCRIPT TO HAVE A SCROLLING ANIMATION. -->
+                    <!-- ! MORE INFORMATION CAN BE FOUND HERE FOR THE BOOTSTRAP CARDS: https://getbootstrap.com/docs/5.3/components/card/#about -->
+                    <div class="row">
+                        <div class="card-group">
+
+                            <!-- ! TAYLOR JOHNSON. -->
                             <div class="card hidden">
                                 <img src="/images/management-team/taylorjohnson.jpg" class="card-img-top" alt="Taylor Johnson">
                                 <div class="card-body">
@@ -175,7 +203,7 @@ let companyname = 'Whispering Woods';
                                 </div>
                             </div>
 
-                            <!-- Jordan Greenwood's management team card using bootstrap. -->
+                            <!-- ! JORDAN GREENWOOD. -->
                             <div class="card hidden">
                                 <img src="/images/management-team/jordangreenwood.jpg" class="card-img-top" alt="Jordan Greenwood">
                                 <div class="card-body">
@@ -188,14 +216,12 @@ let companyname = 'Whispering Woods';
                                         passed his playing aptitude test in the summer of 2024 and is ready to tackle classroom
                                         requirements. He enjoys working with people to improve their games through lessons and
                                         coaching.</p>
-                                
+                                    
                                 </div>
                             </div>
 
-                        
-
+                        </div>
                     </div>
-                </div>
                 </div>
 
                 <br>

@@ -1,24 +1,23 @@
 ---
-// Import header and footer to each page making it easier for the user to navigate between each page.
+// IMPORTS BOTH THE SECONDARY HEADER AND FOOTER TO THE PAGE.
 import Mainlayout from "../../layouts/secondary-header.astro";
 
-// Sets the company name.
+// VARIABLE FOR THE COMPAMY NAME
 let companyname = 'Whispering Woods';
 ---
 
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- Meta Tags. -->
+        <!-- ! META TAGS. -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <!-- Title in the tab bar. -->
+        <!-- ! TAB TITLE. -->
         <title>{companyname} - Memberships</title>
 
-        <!-- Google tag manager for Sprout Marketing. -->
-        <!-- Google tag (gtag.js) -->
+        <!-- ! GOOGLE TAG MANAGER FOR SPROUT MARKETING. DON'T EDIT! -->
         <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-7D8R29D991"></script>
         <script is:inline>
             window.dataLayer = window.dataLayer || [];
@@ -28,13 +27,51 @@ let companyname = 'Whispering Woods';
             gtag('config', 'G-7D8R29D991');
         </script>
 
-        <!-- Icon image on the tab of each page. -->
+        <!-- ! TAB ICONS. -->
         <link rel="icon" href="/images/logos/CroppedLogo2Black.png" media="(prefers-color-scheme: light)">
         <link rel="icon" href="/images/logos/CroppedLogo2.png" media="(prefers-color-scheme: dark)">
 
     </head>
 
     <style>
+        /* IMPORTS GOOGLE FONTS */
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto+Condensed:wght@400;600&display=swap');
+
+        /* Apply styles to all headings (h1, h2, h3, h4, h5, h6) */
+        h1, h2, h3 {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 800; /* Heavy */
+            font-size: 56pt; /* 75pt */
+            text-transform: uppercase; /* Uppercase text */
+            margin: 0; /* Optional: Remove default margin for headings */
+        }
+
+        h4, h5 {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 800; /* Heavy */
+            font-size: 28pt; /* 36pt */
+            text-transform: uppercase; /* Uppercase text */
+            margin: 0; /* Optional: Remove default margin for headings */
+        }
+
+        h6 {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 800; /* Heavy */
+            font-size: 21pt; /* 36pt */
+            text-transform: uppercase; /* Uppercase text */
+            margin: 0; /* Optional: Remove default margin for headings */
+        }
+
+        p, ul, span, a {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight: 400; /* Regular weight */
+            font-size: 14pt; /* 14pt */
+        }
+        
+        button {
+            margin-left: 2px;
+        }
+
         /* Determines if the logo in the tab of each page is black or white. */
         body {
             background-color: white; /* Light mode background */
@@ -53,32 +90,35 @@ let companyname = 'Whispering Woods';
 
     <body>
 
-        <!-- This code is from Foreup for a marketing campaign. -->
-        <!-- Do not edit this section of code. Could interfear with something on Foreup's end. -->
-        <!-- Google Tag Manager (noscript) -->
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MTD2N6TB"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
-        <!-- Import header and footer to each page making it easier for the user to navigate between each page. -->
-        <!-- This is the secondary header which is used on all pages beside the index.astro page. -->
+        <!-- ! IMPORTS THE MAIN LAYOUT FROM "../LAYOUTS/SECONDARY-LAYOUT.ASTRO". -->
         <Mainlayout>
 
             <div class="container">
                 <br>
-                <div class="d-flex justify-content-between align-items-center">
-                    <h3><b>Become a Member:</b></h3>
-                    <a class="nav-link" href="tel:7123664653">
-                        <button type="button" class="button btn btn-outline-dark">
-                            <span class="button-icon"><i class="bi bi-telephone"></i></span>
-                            <span class="button-space">|</span>
-                            <span class="button-text">Call to Join</span>
-                        </button>
-                    </a>
+
+                <!-- ! START OF THE BECOME A MEMBER SECTION. GIVE THE USER A BUTTON TO CALL THE PROSHOP AND INFORMATION ABOUT JOINING WHISPERING WOODS COMMUNITY. -->
+                <div class="become-a-member">
+                    <div class="d-flex flex-column flex-sm-row justify-content-between">
+                        <div class="col-sm-9">
+                            <h4><b>Become a Member:</b></h3>
+                            <a class="nav-link" href="tel:7123664653">
+                        </div>
+                        <div class="col-sm-3 d-flex justify-content-sm-end">
+                            <a class="nav-link" href="https://foreupsoftware.com/index.php/booking/22289/10326#/store">
+                                <button type="button" class="button btn btn-outline-dark">
+                                    <span class="button-icon"><i class="bi bi-telephone"></i></span>
+                                    <span class="button-space">|</span>
+                                    <span class="button-text">Call to Join</span>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
                 </div>
+                
 
                 <hr>
 
-                <!-- TODO: NEEDS TO BE SHORTER! -->
+                <!-- ! NEEDS TO BE SHORTER! -->
                 <p>Joining Whispering Woods Golf Club has many advantages for both golf lovers and beginners. 
                     As a member, you get to play on a high-quality golf course known for its great design. 
                     It's a fun challenge for players at any skill level.</p>
@@ -100,7 +140,8 @@ let companyname = 'Whispering Woods';
 
                 <br>
 
-                <h3><b>Membership Pricing:</b></h3>
+                <!-- ! ALWAYS NEEDS TO UPDATED TO CURRENT PRICES. -->
+                <h4><b>Membership Pricing:</b></h3>
 
                 <hr>
 
@@ -114,6 +155,7 @@ let companyname = 'Whispering Woods';
 
                 <p><b>Junior Membership:</b> $500.00 <i>($105 off through 12/1)</i>.</p>
 
+                <!-- ! INFORMATION ABOUT WHAT THE MEMBERSHIP INCLUDES. THIS COULD BE EITHER IN BULLET POINTS OR AS A PARAGRAPH. -->
                 <p><b>Includes:</b></p>
 
                 <ul>
@@ -127,11 +169,11 @@ let companyname = 'Whispering Woods';
 
                 <br>
 
-                
+                <!-- ! START OF THE BECOME A MEMBER SECTION. GIVE THE USER A BUTTON TO PURCHASE THE PLAYER PASS ONLINE. -->
                 <div id="playerpass">
                     <div class="d-flex flex-column flex-sm-row justify-content-between">
-                        <div class="col-sm-9">
-                            <h3><b>Player Pass: <i>(Limited Time Offer -> 12/1)</i></b></h3>
+                        <div class="col-sm-8">
+                            <h4><b>Player Pass: <i>(Limited Time Offer -> 12/1)</i></b></h3>
                         </div>
                         <div class="col-sm-3 d-flex justify-content-sm-end">
                             <a class="nav-link" href="https://foreupsoftware.com/index.php/booking/22289/10326#/store">
@@ -148,6 +190,7 @@ let companyname = 'Whispering Woods';
     
                     <p><b>Player Pass:</b> $299</p>
     
+                    <!-- ! INFORMATION ABOUT WHAT THE MEMBERSHIP INCLUDES. THIS COULD BE EITHER IN BULLET POINTS OR AS A PARAGRAPH. -->
                     <p><b>Includes:</b></p>
                         <ul>
                             <li>10-free 18 hole rounds with a cart.</li>
