@@ -1,6 +1,6 @@
 ---
 // Import header and footer to each page making it easier for the user to navigate between each page.
-import Mainlayout from "../../layouts/secondary-header.astro";
+import MainLayout from "../../../layouts/secondary-header.astro"
 
 // Sets the company name.
 let companyname = 'Whispering Woods';
@@ -17,7 +17,7 @@ import ViewTransitions from "astro/components/ViewTransitions.astro";
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <!-- ! TAB TITLE. -->
-        <title>{companyname} - Professional Staff</title>
+        <title>{companyname} - Davis Garner</title>
 
         <ViewTransitions />
 
@@ -74,11 +74,6 @@ import ViewTransitions from "astro/components/ViewTransitions.astro";
             font-size: 14pt; /* 14pt */
         }
 
-        a {
-            text-decoration: none;
-            color: black;
-        }
-
         /* Determines if the logo in the tab of each page is black or white. */
         body {
             background-color: white; /* Light mode background */
@@ -93,14 +88,14 @@ import ViewTransitions from "astro/components/ViewTransitions.astro";
         /* Styling the profile card */
         .profile-card {
             text-align: center;
-            max-width: 250px;
+            max-width: 400px;
             margin: 20px;
         }
 
         /* Styling the circular image */
         .profile-image {
-            width: 250px;
-            height: 250px;
+            width: 400px;
+            height: 400px;
             border-radius: 50%;
             overflow: hidden;
             margin: 0 auto;
@@ -118,82 +113,46 @@ import ViewTransitions from "astro/components/ViewTransitions.astro";
         .profile-info {
             margin-top: 10px;
         }
-
-        
     </style>
 
     <body>
 
         <!-- ! IMPORTS THE MAIN LAYOUT FROM "../LAYOUTS/SECONDARY-LAYOUT.ASTRO"-->
-        <Mainlayout>
-
+        <MainLayout>
             <div class="container">
                 <br>
 
-                <h4><b>Professional Staff:</b></h2>
 
-                <hr>
-
-                <div class="row">
-                    <div class="col d-flex justify-content-center">
-                        <a href="../information/professional-staff-profile/tony-driscoll/">
-                            <div class="profile-card">
-                                <div class="profile-image">
-                                    <img src="/images/management-team/anthonydriscoll.jpg" class="card-img-top" alt="Anthony Driscoll" transition:name="tonydriscoll">
-                                </div>
-                                <div class="profile-info">
-                                  <h5 class="name">Tony Driscoll</h5>
-                                  <h6>Director of Golf</h6>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col d-flex justify-content-center">
-                        <a href="../information/professional-staff-profile/davis-garner/">
+                    <div class="row">
+                        <div class="col-xxl-4 d-flex justify-content-center">
                             <div class="profile-card">
                                 <div class="profile-image">
                                     <img src="/images/management-team/davisgarner.jpg" class="card-img-top" alt="Davis Garner" transition:name="davisgarner">
                                 </div>
-                                <div class="profile-info">
-                                  <h5 class="name">Davis Garner</h5>
-                                  <h6>General Manager</h6>
-                                </div>
                               </div>
-                        </a>
-                    </div>
-                    <div class="col d-flex justify-content-center">
-                        <a href="../information/professional-staff-profile/taylor-johnson/">
-                            <div class="profile-card">
-                                <div class="profile-image">
-                                    <img src="/images/management-team/taylorjohnson.jpg" class="card-img-top" alt="Taylor Johnson" transition:name="taylorjohnson">
-                                </div>
-                                <div class="profile-info">
-                                <h5 class="name">Taylor Johnson</h5>
-                                <h6>Assistant Golf Professional</h6>
-                                </div>
+                        </div>
+                        <div class="col-xxl-8">
+                            <div class="profile-info">
+                                <h5 class="name">Davis Garner</h5>
+                                <h6>General Manager</h6>
                             </div>
-                        </a>
+                            <hr>
+                            <p class="card-text">Davis, from Utah has a rich history in golf. His journey began in college, where he played golf at various levels, 
+                                demonstrating both skill and passion for the game. These experiences laid the groundwork for a lifelong career in the golf industry.</p>
+                            <p>His dedication to the sport and the industry has not only enriched his professional life but also enabled him to gather an array of invaluable 
+                                insights and expertise. Today, he brings all of this to our team, leveraging his deep understanding of the sport to enhance our operations 
+                                and services.</p>
+                        </div>
                     </div>
-                    <div class="col d-flex justify-content-center">
-                        <a href="../information/professional-staff-profile/jordan-greenwood/">
-                            <div class="profile-card">
-                                <div class="profile-image">
-                                    <img src="/images/management-team/jordangreenwood.jpg" class="card-img-top" alt="Jordan Greenwood" transition:name="jordangreenwood">
-                                </div>
-                                <div class="profile-info">
-                                  <h5 class="name">Jordan Greenwood</h5>
-                                  <h6>Assistant Golf Professional</h6>
-                                </div>
-                              </div>
-                        </a>
-                    </div>
+                    
                 </div>
 
                 <br>
 
             </div>
 
-        </Mainlayout>
+
+        </MainLayout>
 
     </body>
 </html>

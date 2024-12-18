@@ -11,6 +11,8 @@ import MissionStatement from "../components/mission-statement.astro";
 
 // Sets the company name.
 let companyname = "Whispering Woods";
+
+import ViewTransitions from "astro/components/ViewTransitions.astro";
 ---
 
 <!doctype html>
@@ -23,6 +25,8 @@ let companyname = "Whispering Woods";
 
         <!-- ! TAB TITLE. -->
         <title>{companyname} - Home</title>
+
+        <ViewTransitions />
 
         <!-- ! GOOGLE TAG MANAGER FOR SPROUT MARKETING. DON'T EDIT -->
         <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-7D8R29D991"></script>
@@ -64,7 +68,8 @@ let companyname = "Whispering Woods";
         h6 {
             font-family: 'Raleway', sans-serif;
             font-weight: 800; /* Heavy */
-            font-size: 21pt; /* 36pt */
+            font-size: 18pt; /* 36pt */
+            color: green;
             text-transform: uppercase; /* Uppercase text */
             margin: 0; /* Optional: Remove default margin for headings */
         }

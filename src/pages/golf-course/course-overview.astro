@@ -5,6 +5,8 @@ import Mainlayout from "../../layouts/secondary-header.astro";
 // Sets the company name.
 let companyname = "Whispering Woods";
 
+import ViewTransitions from "astro/components/ViewTransitions.astro";
+
 // Import each hole from "../../components/course-overview/" 
 import Hole10 from "../../components/course-overview/hole10.astro";
 import Hole12 from "../../components/course-overview/hole12.astro";
@@ -24,6 +26,8 @@ import Hole16 from "../../components/course-overview/hole16.astro";
 
         <!-- Title in the tab bar. -->
         <title>{companyname} - Course Overview</title>
+
+        <ViewTransitions />
 
         <!-- Google tag manager for Sprout Marketing. -->
         <!-- Google tag (gtag.js) -->
@@ -66,7 +70,8 @@ import Hole16 from "../../components/course-overview/hole16.astro";
         h6 {
             font-family: 'Raleway', sans-serif;
             font-weight: 800; /* Heavy */
-            font-size: 21pt; /* 36pt */
+            font-size: 18pt; /* 36pt */
+            color: green;
             text-transform: uppercase; /* Uppercase text */
             margin: 0; /* Optional: Remove default margin for headings */
         }

@@ -4,6 +4,8 @@ import Mainlayout from "../../layouts/secondary-header.astro";
 
 // Sets the company name.
 let companyname = 'Whispering Woods';
+
+import ViewTransitions from "astro/components/ViewTransitions.astro";
 ---
 
 <!DOCTYPE html>
@@ -16,6 +18,8 @@ let companyname = 'Whispering Woods';
 
         <!-- ! TAB TITLE -->
         <title>{companyname} - Direction/Hours</title>
+
+        <ViewTransitions />
 
         <!-- ! GOOGLE TAG MANAGER FOR SPROUT MARKETING. DON'T EDIT! -->
         <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-7D8R29D991"></script>
@@ -57,7 +61,8 @@ let companyname = 'Whispering Woods';
         h6 {
             font-family: 'Raleway', sans-serif;
             font-weight: 800; /* Heavy */
-            font-size: 21pt; /* 36pt */
+            font-size: 18pt; /* 36pt */
+            color: green;
             text-transform: uppercase; /* Uppercase text */
             margin: 0; /* Optional: Remove default margin for headings */
         }
@@ -94,9 +99,11 @@ let companyname = 'Whispering Woods';
             <div class="container">
                 <br>
 
-                <h4><b>Direction & Hours:</b><h4>
+                <h4>Information:</h4>
 
                 <hr>
+
+                <h6><b>Direction & Hours:</b></h6>
                 
                 <!-- ! PROVIDES THE USER WITH ADDRESS, PHONE NUMBER AND EMAIL. -->
                 <p><b>Address:</b> 3001 Macineery Dr, Council Bluffs, IA 51501</p>
@@ -104,17 +111,12 @@ let companyname = 'Whispering Woods';
 
                 <br>
 
-                <h4><b>Fall/Winter Hours:</b></h4>
+                <h6><b>Fall/Winter Hours:</b></h6>
 
-                <hr>
-
-                <p><b>Sunday:</b> 9am - 5pm.</p>
-                <p><b>Monday:</b> 9am - 5pm.</p>
-                <p><b>Tuesday:</b> 9am - 5pm.</p>
-                <p><b>Wednesday:</b> 9am - 5pm.</p>
-                <p><b>Thursday:</b> 9am - 5pm.</p>
-                <p><b>Friday:</b> 9am - 5pm.</p>
-                <p><b>Saturday:</b> 9am - 5pm.</p>
+                <p><b>Sunday:</b> 9am - 5pm.<br><b>Monday:</b> 9am - 5pm.<br>
+                <b>Tuesday:</b> 9am - 5pm.<br><b>Wednesday:</b> 9am - 5pm.<br>
+                <b>Thursday:</b> 9am - 5pm.<br><b>Friday:</b> 9am - 5pm.<br>
+                <b>Saturday:</b> 9am - 5pm.</p>
 
                 <br>
 

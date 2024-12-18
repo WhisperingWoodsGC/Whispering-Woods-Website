@@ -4,6 +4,8 @@ import Mainlayout from "../../layouts/secondary-header.astro";
 
 // VARIABLE FOR THE COMPAMY NAME
 let companyname = 'Whispering Woods';
+
+import ViewTransitions from "astro/components/ViewTransitions.astro";
 ---
 
 <!DOCTYPE html>
@@ -16,6 +18,8 @@ let companyname = 'Whispering Woods';
         
         <!-- ! TAB TITLE. -->
         <title>{companyname} - Memberships</title>
+
+        <ViewTransitions />
 
         <!-- ! GOOGLE TAG MANAGER FOR SPROUT MARKETING. DON'T EDIT! -->
         <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-7D8R29D991"></script>
@@ -57,7 +61,8 @@ let companyname = 'Whispering Woods';
         h6 {
             font-family: 'Raleway', sans-serif;
             font-weight: 800; /* Heavy */
-            font-size: 21pt; /* 36pt */
+            font-size: 18pt; /* 36pt */
+            color: green;
             text-transform: uppercase; /* Uppercase text */
             margin: 0; /* Optional: Remove default margin for headings */
         }
@@ -86,6 +91,29 @@ let companyname = 'Whispering Woods';
         img {
             float: right;
         }
+
+        .button {
+            padding-top: 10px;
+        }
+
+        /* Add black outline to the accordion button */
+        .accordion-button {
+        border: 1px solid black;
+        border-radius: 4px;
+        }
+
+        /* Style for the active (expanded) accordion button */
+        .accordion-button:not(.collapsed) {
+        background-color: #f8f9fa;  /* Light background color */
+        border-color: black;         /* Optional: change the border color when active */
+        }
+
+        /* Style for the active (expanded) accordion body */
+        .accordion-button:not(.collapsed) + .accordion-collapse .accordion-body {
+        background-color: #f8f9fa;  /* Light background color for the body */
+        }
+
+        
     </style>
 
     <body>
@@ -94,17 +122,18 @@ let companyname = 'Whispering Woods';
         <Mainlayout>
 
             <div class="container">
-                <br>
 
+                <br>
+                
                 <!-- ! START OF THE BECOME A MEMBER SECTION. GIVE THE USER A BUTTON TO CALL THE PROSHOP AND INFORMATION ABOUT JOINING WHISPERING WOODS COMMUNITY. -->
                 <div class="become-a-member">
-                    <div class="d-flex flex-column flex-sm-row justify-content-between">
-                        <div class="col-sm-9">
-                            <h4><b>Become a Member:</b></h3>
-                            <a class="nav-link" href="tel:7123664653">
+                    <div class="d-flex flex-row justify-content-between align-items-center w-100">
+                        <div class="col-sm-8">
+                            <h4><b>Membership:</b></h4>
                         </div>
-                        <div class="col-sm-3 d-flex justify-content-sm-end">
-                            <a class="nav-link" href="https://foreupsoftware.com/index.php/booking/22289/10326#/store">
+                        <!-- ! BUTTON FOR USERS TO CALL THE CLUBHOUSE. -->
+                        <div class="col-sm-4 d-flex justify-content-sm-end button">
+                            <a class="nav-link" href="tel:7123664653">
                                 <button type="button" class="button btn btn-outline-dark">
                                     <span class="button-icon"><i class="bi bi-telephone"></i></span>
                                     <span class="button-space">|</span>
@@ -114,96 +143,89 @@ let companyname = 'Whispering Woods';
                         </div>
                     </div>
                 </div>
+
+                <hr>
+
+                <h6><b>Join Whispering Woods Golf Club:</b></h6>
+            
+                <p>At Whispering Woods, we believe golf is more than just a sport—it’s a way of 
+                    life. As a member, you’re not just gaining access to an exceptional course; you’re 
+                    joining a family of like-minded individuals who share a genuine love for the game and its traditions. 
+                    Whether you’re on the course, in the clubhouse, or participating in one of 
+                    our many social events, you’ll find a warm and welcoming environment where 
+                    friendships are formed, and the joy of the game is 
+                    celebrated together.</p>
+
+                <br>
+
+                <div class="accordion accordion-flush" id="membership">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                          <h6><b>Membership Pricing</b></h6>
+                        </button>
+                      </h2>
+                      <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#membership">
+                        <div class="accordion-body bg-light">
+                          <p><b>Single Membership:</b> $1,800.00. <br>
+                          <b>Junior Executive:</b> $1,500.00. <br>
+                          <b>Senior Membership:</b> $1,500.00. <br>
+                          <b>Walking Membership:</b> $1,000.00. <br>
+                          <b>Junior Membership:</b> $500.00</p>
+
+                          <br>
+        
+                          <h6><b>Includes:</b></h6>
+                          <ul>
+                            <li>Unlimited golf with cart<i>(member cart fees apply to the walking membership)</i>.</li>
+                            <li>$300 facility fee.</li>
+                            <li>GHIN #.</li>
+                            <li>Member only tee times throughout the week.</li>
+                            <li>14-day advanced booking.</li>
+                            <li>Member pricing in the pro shop.</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>    
+                  </div>
                 
+                  <br>
+                
+                  <!-- Second Accordion: Player Pass -->
+                  <div class="accordion accordion-flush" id="playerpass">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                          <h6><b>Player Pass</b></h6>
+                        </button>
+                      </h2>
+                      <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#playerpass">
+                        <div class="accordion-body bg-light">
+                            <p><b>Player Pass:</b> $299</p>
 
-                <hr>
-
-                <!-- ! NEEDS TO BE SHORTER! -->
-                <p>Joining Whispering Woods Golf Club has many advantages for both golf lovers and beginners. 
-                    As a member, you get to play on a high-quality golf course known for its great design. 
-                    It's a fun challenge for players at any skill level.</p>
-
-                <p>But Whispering Wood Golf Club isn't just about golf. It's a social hub where members can 
-                    meet new people and network. The club hosts events and tournaments that are not only fun 
-                    but also a way to make friends in a relaxed setting.</p>
-
-                <p>Members also have access to top-notch facilities. These include the clubhouse, pro shop, 
-                    and practice areas. The club always keeps these places in great shape for members to 
-                    enjoy.</p>
-
-                <p>There are also options for professional training. If you're a seasoned player wanting to 
-                    get better, or a newbie wanting to learn, the club has PGA professionals to help you. This focus 
-                    on helping members improve is another thing that makes the club special.</p>
-
-                <p>Joining Whispering Wood Golf Club isn't just about playing golf. It's about joining a 
-                    community of people who love the sport and enjoy the lifestyle that comes with it.</p>
-
-                <br>
-
-                <!-- ! ALWAYS NEEDS TO UPDATED TO CURRENT PRICES. -->
-                <h4><b>Membership Pricing:</b></h3>
-
-                <hr>
-
-                <p><b>Single Membership:</b> $1,800.00.</p>
-
-                <p><b>Junior Executive:</b> $1,500.00.</p>
-
-                <p><b>Senior Membership:</b> $1,500.00.</p>
-
-                <p><b>Walking Membership</b> $1,000.00.</p>
-
-                <p><b>Junior Membership:</b> $500.00 <i>($105 off through 12/1)</i>.</p>
-
-                <!-- ! INFORMATION ABOUT WHAT THE MEMBERSHIP INCLUDES. THIS COULD BE EITHER IN BULLET POINTS OR AS A PARAGRAPH. -->
-                <p><b>Includes:</b></p>
-
-                <ul>
-                    <li>Unlimited golf with cart<i>(member cart fees applies to the walking membership)</i>.</li>
-                    <li>$300 facility fee.</li>
-                    <li>GHIN #.</li>
-                    <li>Member only tee times throughout the week.</li>
-                    <li>14 day advanced booking.</li>
-                    <li>Member pricing in the proshop.</li>
-                </ul>
-
-                <br>
-
-                <!-- ! START OF THE BECOME A MEMBER SECTION. GIVE THE USER A BUTTON TO PURCHASE THE PLAYER PASS ONLINE. -->
-                <div id="playerpass">
-                    <div class="d-flex flex-column flex-sm-row justify-content-between">
-                        <div class="col-sm-8">
-                            <h4><b>Player Pass: <i>(Limited Time Offer -> 12/1)</i></b></h3>
-                        </div>
-                        <div class="col-sm-3 d-flex justify-content-sm-end">
-                            <a class="nav-link" href="https://foreupsoftware.com/index.php/booking/22289/10326#/store">
-                                <button type="button" class="button btn btn-outline-dark">
-                                    <span class="button-icon"><i class="bi bi-calendar"></i></span>
-                                    <span class="button-space">|</span>
-                                    <span class="button-text">Buy your Player Pass</span>
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-    
-                    <hr>
-    
-                    <p><b>Player Pass:</b> $299</p>
-    
-                    <!-- ! INFORMATION ABOUT WHAT THE MEMBERSHIP INCLUDES. THIS COULD BE EITHER IN BULLET POINTS OR AS A PARAGRAPH. -->
-                    <p><b>Includes:</b></p>
-                        <ul>
-                            <li>10-free 18 hole rounds with a cart.</li>
+                          <h6><b>Includes:</b></h6>
+                          <ul>
+                            <li>10 free 18-hole rounds with a cart.</li>
                             <li>Replay rate after the 10th round.</li>
                             <li>Discounted rates for your group.</li>
                             <li>14-day advanced booking.</li>
-                            <li>Member pricing in proshop.</li>
-                        </ul>
-    
-                    <br>
-                </div>
+                            <li>Member pricing in the pro shop.</li>
+                          </ul>
+
+                            <a class="nav-link" href="https://foreupsoftware.com/index.php/booking/22289/10326#/store">
+                                <button type="button" class="button btn btn-outline-dark">
+                                    <span class="button-icon"><i class="bi bi-bag"></i></span>
+                                    <span class="button-space">|</span>
+                                    <span class="button-text">Buy your Pass!</span>
+                                </button>
+                            </a>
+
+                        </div>
+                      </div>
+                    </div>    
+                  </div>
                 
-                    
+                <br>
                 
             </div>
 

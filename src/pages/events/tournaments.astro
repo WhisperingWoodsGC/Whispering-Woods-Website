@@ -2,26 +2,28 @@
 // Import header and footer to each page making it easier for the user to navigate between each page.
 import Mainlayout from "../../layouts/secondary-header.astro";
 
+import Testimonies from "../../components/testimonies.astro";
+
 // Sets the company name.
 let companyname = 'Whispering Woods';
 
 import ViewTransitions from "astro/components/ViewTransitions.astro";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <!-- ! META TAGS. -->
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <!-- ! TAB TITLE. -->
-        <title>{companyname} - Etiquette</title>
+        <title>{companyname} - Tournament</title>
 
         <ViewTransitions />
 
-        <!-- ! GOOGLE TAG MANAGER FOR SPROUT MARKETING. DON'T EDIT! -->
+        <!-- ! GOOGLE TAG MANAGER FOR SPROUT MARKETING. DON'T TOUCH! -->
         <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-7D8R29D991"></script>
         <script is:inline>
             window.dataLayer = window.dataLayer || [];
@@ -72,7 +74,10 @@ import ViewTransitions from "astro/components/ViewTransitions.astro";
             font-family: 'Roboto Condensed', sans-serif;
             font-weight: 400; /* Regular weight */
             font-size: 14pt; /* 14pt */
+            text-decoration: none;
+            color: black;
         }
+
         /* Determines if the logo in the tab of each page is black or white. */
         body {
             background-color: white; /* Light mode background */
@@ -86,37 +91,36 @@ import ViewTransitions from "astro/components/ViewTransitions.astro";
     </style>
     
     <body>
-
-        <!-- ! IMPORTS THE MAIN LAYOUT FROM "../LAYOUTS/SECONDARY-HEADER.ASTRO" -->
+        
+        <!-- ! IMPORTS THE MAIN LAYOUT FROM "../LAYOUTS/SECONDARY-LAYOUT.ASTRO"-->
         <Mainlayout>
 
+            <!-- ! DELETE THIS WHEN READY TO UPLOAD CONTENT. -->
             <div class="container">
-
                 <br>
-
-                <h4><b>Golf Etiquette:</b></h4>
+                <h4>Tournaments:</h4>
                 <hr>
-                <p>It is important to always wear appropriate golf attire when on the golf course. This helps 
-                    maintain a professional and respectful atmosphere for all players. The golf staff will be 
-                    present to assist you and ensure that your attire meets the required standards. If you 
-                    are unsure about what qualifies as appropriate golf attire, feel free to contact the proshop 
-                    with any questions you may have.</p>
-
-                <p>Listed below are some of the items not allowed and other policies that are enforced:</p>
-
-                <ul>
-                    <li>Tank tops, tee shirts, or sleeveless shirts.</li>
-                    <li>Golfers must wear soft spike golf shoes or tennis shoes.</li>
-                    <li>No Five-some are allowed.</li>
-                    <li>Twosomes and threesomes that book tee times will be paired up with other twosomes or singles.</li>
-                    <li>All riders will be charged a cart fee.</li>
-                    <li>No more than 2 people are allowed in the carts at all times.</li>
-                </ul>
+                <h6>Host Your Next Tournament at Whispering Woods:</h6>
+                <p>Looking for the perfect venue for your next corporate outing,
+                    private tournament, fundraiser, or non-profit event? Whispering Woods
+                    offers a stunning setting and comprehensive event service to make your
+                    occasion unforgettable.<br></p>
+                <p>We offer full services and amenities to you no matter the occasion, including
+                    food options, prizes, and a designated event planner.<br></p>
+                <p><b>Want to elevate your event?</b> Add our private upstairs party room for an
+                    exclusive sexperience for any occasion.</p>
 
                 <br>
-            
-            </div>
 
+                <h6>Book your tournament today!</h6>
+                <p><i class="fa fa-phone"></i> <a href="tel:+1234567890">+1 (712) 366-4653</a><br>
+                <i class="fa fa-envelope"></i> <a href="mailto:proshop@thewoodsgc.com">proshop@thewoodsgc.com</a></p>
+                
+
+                <br>
+
+            </div>
+                    
         </Mainlayout>
         
     </body>

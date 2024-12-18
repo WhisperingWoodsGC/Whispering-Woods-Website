@@ -4,6 +4,8 @@ import Mainlayout from "../../layouts/secondary-header.astro";
 
 // Sets the company name.
 let companyname = 'Whispering Woods';
+
+import ViewTransitions from "astro/components/ViewTransitions.astro";
 ---
 
 <!DOCTYPE html>
@@ -16,6 +18,8 @@ let companyname = 'Whispering Woods';
 
         <!-- ! TAB TITLE. -->
         <title>{companyname} - Employment Opportunities</title>
+
+        <ViewTransitions />
 
         <!-- ! GOOGLE TAG MANAGER FOR SPROUT MARKETING. DON'T EDIT! -->
         <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-7D8R29D991"></script>
@@ -56,7 +60,8 @@ let companyname = 'Whispering Woods';
         h6 {
             font-family: 'Raleway', sans-serif;
             font-weight: 800; /* Heavy */
-            font-size: 21pt; /* 36pt */
+            font-size: 18pt; /* 36pt */
+            color: green;
             text-transform: uppercase; /* Uppercase text */
             margin: 0; /* Optional: Remove default margin for headings */
         }
@@ -96,12 +101,13 @@ let companyname = 'Whispering Woods';
 
                 <br>
                 
-                <h4><b>Employment Opportunities - Join Our Team!</b></h4>
+                <h4><b>Employment Opportunities:</b></h4>
                 <hr>
 
                 <div class="row">
                     <div class="col">
 
+                        <h6>Join Our Team:</h6>
                         <!-- TODO: NEEDS TO BE SHORTER -->
                         <p>We think you would be a great fit for our team at {companyname}. {companyname} is an attractive 18-hole golf
                             course located in Council Bluffs, Iowa. Our facility offers various amenities and services for golfers of 
@@ -121,7 +127,6 @@ let companyname = 'Whispering Woods';
                 <br>
 
                 <h6><b>{companyname} Perks:</b></h6>
-                <hr>
                 <ul>
                     <li>Fun Environment</li>
                     <li>Networking Opportunities</li>
@@ -131,7 +136,6 @@ let companyname = 'Whispering Woods';
                 <br>
 
                 <h6><b>Apply to work with us!</b></h6>
-                <hr>
                 <p>If you are interested in working with us, we would highly appreciate it if you could take a moment to stop inside the clubhouse
                     to fill out an application. Your interest and effort in submitting the application will be greatly valued and 
                     considered in our selection process. Thank you for considering this opportunity to work with us!</p>

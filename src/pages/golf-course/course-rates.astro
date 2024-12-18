@@ -4,6 +4,8 @@ import Mainlayout from "../../layouts/secondary-header.astro";
 
 // Sets the company name.
 let companyname = 'Whispering Woods';
+
+import ViewTransitions from "astro/components/ViewTransitions.astro";
 ---
 
 <!DOCTYPE html>
@@ -16,6 +18,8 @@ let companyname = 'Whispering Woods';
 
         <!-- ! TAB TITLE. -->
         <title>{companyname} - Course Rates</title>
+        
+        <ViewTransitions />
 
         <!-- ! GOOGLE TAG MANAGER FOR SPROUT MARKETING. DON'T TOUCH! -->
         <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-7D8R29D991"></script>
@@ -57,7 +61,8 @@ let companyname = 'Whispering Woods';
         h6 {
             font-family: 'Raleway', sans-serif;
             font-weight: 800; /* Heavy */
-            font-size: 21pt; 
+            font-size: 18pt; /* 36pt */
+            color: green;
             text-transform: uppercase; /* Uppercase text */
             margin: 0; /* Optional: Remove default margin for headings */
         }
@@ -88,47 +93,43 @@ let companyname = 'Whispering Woods';
 
             <div class="container">
                 <br>
-                <h4><b>2024 Fall Rates:</b></h4>
+                <h4><b>Fall Rates:</b></h4>
 
                 <hr>
 
-                <p>Tee times can be made up to 7 days in advance.</p>
-                <p>Practice balls are included with the round of golf 30 minutes prior to tee times.</p>
+                <h6><b>Weekdays:</b></h6>
+
+                <p>18 Holes Green Fee with cart: $35. <br>
+                9 Hole Green Fee with cart: $25.</p>
 
                 <br>
 
-                <p><b>Weekdays:</b></p>
-
-                <p>18 Holes Green Fee with cart: $35.</p>
-                <p>9 Hole Green Fee with cart: $25.</p>
-
-                <br>
-
-                <p><b>Weekends & Holidays:</b></p>
+                <h6><b>Weekend/Holiday:</b></h6>
 
                 <p>18 Holes Green Fee with cart: $45.</p>
 
                 <br>
 
-                <p><b>Senior/Junior(Monday-Friday):</b></p>
+                <h6><b>Senior/Junior (Monday-Friday):</b></h6>
 
                 <p>18 Holes Green Fee with cart: $30.</p>
 
                 <br>
 
-                <p><b>Rental Clubs:</b></p>
+                <h6><b>Rental Clubs:</b></h6>
 
                 <p>$40 per set(Tour Edge).</p>
 
                 <br>
 
-                <p><b>Range Passes:</b></p>
+                <h6><b>Range Pass:</b></h6>
                 <p>Avaliable Tuesday - Friday: $20 1 hour pass or $33 day pass.</p>
 
                 <br>
 
-                <p><b><i>*Military: $5 off rack rate.*</i></b></p>
-                <p><b><i>*All Prices above include applicable taxes.*</i></b></p>
+                <p><b><i>*Military: $5 off rack rate.*</i></b> <br>
+                <b><i>*All Prices above include applicable taxes.*</i></b> <br>
+                <b><i>*Practice balls are included with the round of golf 30 minutes prior to tee times.*</i></b></p>
             </div>
 
         </Mainlayout>

@@ -2,8 +2,12 @@
 // Import header and footer to each page making it easier for the user to navigate between each page.
 import Mainlayout from "../../layouts/secondary-header.astro";
 
+import Testimonies from "../../components/testimonies.astro";
+
 // Sets the company name.
 let companyname = 'Whispering Woods';
+
+import ViewTransitions from "astro/components/ViewTransitions.astro";
 ---
 
 <!doctype html>
@@ -16,6 +20,8 @@ let companyname = 'Whispering Woods';
 
         <!-- ! TAB TITLE. -->
         <title>{companyname} - Private Events/Parties</title>
+
+        <ViewTransitions />
 
         <!-- ! GOOGLE TAG MANAGER FOR SPROUT MARKETING. DON'T TOUCH! -->
         <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-7D8R29D991"></script>
@@ -57,7 +63,8 @@ let companyname = 'Whispering Woods';
         h6 {
             font-family: 'Raleway', sans-serif;
             font-weight: 800; /* Heavy */
-            font-size: 21pt; /* 36pt */
+            font-size: 18pt; /* 36pt */
+            color: green;
             text-transform: uppercase; /* Uppercase text */
             margin: 0; /* Optional: Remove default margin for headings */
         }
@@ -67,6 +74,8 @@ let companyname = 'Whispering Woods';
             font-family: 'Roboto Condensed', sans-serif;
             font-weight: 400; /* Regular weight */
             font-size: 14pt; /* 14pt */
+            text-decoration: none;
+            color: black;
         }
 
         /* Determines if the logo in the tab of each page is black or white. */
@@ -85,16 +94,37 @@ let companyname = 'Whispering Woods';
         
         <!-- ! IMPORTS THE MAIN LAYOUT FROM "../LAYOUTS/SECONDARY-LAYOUT.ASTRO"-->
         <Mainlayout>
+
+            <!-- ! DELETE THIS WHEN READY TO UPLOAD CONTENT. -->
             <div class="container">
                 <br>
-                <h4><b>Private Events/Parties:</b></h4>
+                <h4>The Perfect Space for Any Par-Tee!</h4>
                 <hr>
+                <h6>Host Your Next Event at Whispering Woods:</h6>
+                <p>Whispering Woods Golf Club is the perfect venue
+                    for your family reunion, birthday, or anniversary
+                    celebration. With a beautiful course, elegant
+                    clubhouse, and customizable event spaces, weʼll
+                    ensure your occasion is unforgettable.</p>
 
+                <br>
 
-                <!-- TODO: INFORMATION, WAY TO SCHEDULE, PICTURES.-->
-                <p><b>Comming Soon!</b></p>
+                <h6>Pricing:</h6>
+                <p><b>2025 Room Rental Rates: <i>(4 hour min)</i></b><br>
+                <b>Sunday-Thrusday:</b> $100/Hour. <br> 
+                <b>Friday-Saturday:</b> $150/Hour.</p>
+
+                <br>
+
+                <h6>Contact us today to reserve your date!</h6>
+                <p><i class="fa fa-phone"></i> <a href="tel:+1234567890">+1 (712) 366-4653</a><br>
+                <i class="fa fa-envelope"></i> <a href="mailto:proshop@thewoodsgc.com">proshop@thewoodsgc.com</a></p>
+                
+
+                <br>
+
             </div>
-
+                    
         </Mainlayout>
         
     </body>
