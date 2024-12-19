@@ -74,17 +74,17 @@ import ViewTransitions from "astro/components/ViewTransitions.astro";
         }
         
         button {
-            margin-left: 2px;
+          margin-left: 2px;
         }
 
         /* Determines if the logo in the tab of each page is black or white. */
         body {
-            background-color: white; /* Light mode background */
+          background-color: white; /* Light mode background */
         }
 
         @media (prefers-color-scheme: dark) {
             body {
-                background-color: black; /* Dark mode background */
+              background-color: black; /* Dark mode background */
             }
         }
 
@@ -98,19 +98,19 @@ import ViewTransitions from "astro/components/ViewTransitions.astro";
 
         /* Add black outline to the accordion button */
         .accordion-button {
-        border: 1px solid black;
-        border-radius: 4px;
+          border: 1px solid black;
+          border-radius: 4px;
         }
 
         /* Style for the active (expanded) accordion button */
         .accordion-button:not(.collapsed) {
-        background-color: #f8f9fa;  /* Light background color */
-        border-color: black;         /* Optional: change the border color when active */
+          background-color: #f8f9fa;  /* Light background color */
+          border-color: black;         /* Optional: change the border color when active */
         }
 
         /* Style for the active (expanded) accordion body */
         .accordion-button:not(.collapsed) + .accordion-collapse .accordion-body {
-        background-color: #f8f9fa;  /* Light background color for the body */
+          background-color: #f8f9fa;  /* Light background color for the body */
         }
 
         
