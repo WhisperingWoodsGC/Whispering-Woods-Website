@@ -1,8 +1,8 @@
 ---
 // Import header and footer to each page making it easier for the user to navigate between each page.
 import HomepageLayout from "../layouts/homepage-layout.astro";
-
 import Alerts from "../components/alerts.astro";
+import IndexThreeCards from "../components/index-three-cards.astro";
 
 // Sets the company name.
 let companyname = "Whispering Woods";
@@ -93,7 +93,7 @@ import ViewTransitions from "astro/components/ViewTransitions.astro";
         
     </style>
     
-    <body class="bg-light">
+    <body>
 
         
         <!-- ! ADDES AN ALERT FOR THE INDEX PAGE. USED TO SHOW USERS DEALS AND OTHER INFORMATION. -->
@@ -103,12 +103,7 @@ import ViewTransitions from "astro/components/ViewTransitions.astro";
         <!-- ! IMPORTS THE HOMELAYOUT TO THE INDEX PAGE. -->
         <!-- ! HOMELAYOUT CAN BE LOCATED AT "../LAYOUTS/HOMEPAGE-LAYOUT.ASTRO" -->
         <HomepageLayout>
-
-            <!-- TODO: UPDATE PHOTOS ON INDEX CARDS, PUT IN MISSION STATEMENT AND UPDATE TO NEW PHOTO. -->
-            <!-- <IndexThreeCards />
-
-            <MissionStatement /> -->
-    
+            <!-- <IndexThreeCards /> -->
         </HomepageLayout>
         
     </body>

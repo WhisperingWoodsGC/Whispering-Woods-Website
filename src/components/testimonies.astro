@@ -3,102 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full-Width Bootstrap Carousel</title>
-
-    <!-- Include Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Optional: Include a custom stylesheet for your styles -->
-    <style>
-        /* Ensure the carousel takes up no more than 25% of the viewport height */
-        .carousel-item {
-            height: 25vh; /* Set the height of the carousel to 25% of the viewport height */
-            background-size: cover; /* Ensure the background image covers the area */
-            background-position: center;
-        }
-
-        /* Center the text vertically and horizontally within the carousel */
-        .carousel-caption {
-            position: absolute;
-            top: 40%; /* Vertically center */
-            left: 50%; /* Horizontally center */
-            transform: translate(-50%, -50%); /* Adjust positioning for exact centering */
-            color: #fff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            text-align: center; /* Ensure text is centered inside the div */
-        }
-
-        /* Optional: Adjust the font sizes */
-        .carousel-caption h3 {
-            font-size: 1.5rem; /* Adjust to your needs */
-        }
-
-        .carousel-caption p {
-            font-size: 1rem; /* Adjust to your needs */
-        }
-    </style>
 </head>
+<style>
+    /* Apply styles to all headings (h1, h2, h3, h4, h5, h6) */
+    h1, h2, h3 {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 800; /* Heavy */
+            font-size: 56pt; /* 75pt */
+            text-transform: uppercase; /* Uppercase text */
+            margin: 0; /* Optional: Remove default margin for headings */
+        }
+
+        h4, h5 {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 800; /* Heavy */
+            font-size: 28pt; /* 36pt */
+            text-transform: uppercase; /* Uppercase text */
+            margin: 0; /* Optional: Remove default margin for headings */
+        }
+
+        h6 {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 800; /* Heavy */
+            font-size: 18pt; /* 36pt */
+            color: green;
+            text-transform: uppercase; /* Uppercase text */
+            margin: 0; /* Optional: Remove default margin for headings */
+        }
+        /* Apply styles to all paragraphs */
+        p, ul, span, a {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight: 400; /* Regular weight */
+            font-size: 14pt; /* 14pt */
+        }
+</style>
 <body>
-
-<!-- Full Width Carousel -->
-<div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="3000">
-    <div class="carousel-inner">
-
-        <!-- Slide 1 -->
-        <div class="carousel-item active" style="background-image: url('https://via.placeholder.com/1500x800/ff7f7f/333333');">
-            <div class="carousel-caption">
-                <h3>September 2024</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus pariatur quisquam dicta. Commodi voluptates non quia, accusamus facilis eum ipsam eius vero, error aut beatae pariatur dolore? Repellendus, rerum nobis.</p>
+    <br>
+    <div class="container">
+        <div class="row text-center">
+            <h4>Testimonies from Members:</h4>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="col-xl-4 text-center">
+                <h6>Marty Shelton</h6>
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <p>There have been numerous improvements made and the staff is really making needed progress to 
+                    make the course and clubhouse more enjoyable. It’s always been a beautiful place and the 
+                    group there is making it far better than it was.</p>
+            </div>
+            <div class="col-xl-4 text-center">
+                <h6>Marty Shelton</h6>
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <p>There have been numerous improvements made and the staff is really making needed progress to 
+                    make the course and clubhouse more enjoyable. It’s always been a beautiful place and the 
+                    group there is making it far better than it was.</p>
+            </div>
+            <div class="col-xl-4 text-center">
+                <h6>Marty Shelton</h6>
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <p>There have been numerous improvements made and the staff is really making needed progress to 
+                    make the course and clubhouse more enjoyable. It’s always been a beautiful place and the 
+                    group there is making it far better than it was.</p>
             </div>
         </div>
-
-        <!-- Slide 2 -->
-        <div class="carousel-item" style="background-image: url('https://via.placeholder.com/1500x800/7fbf7f/333333');">
-            <div class="carousel-caption">
-                <h3>September 2024</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam veniam tempora saepe, quod temporibus fuga laborum rerum eaque et aliquam voluptatem distinctio vero modi cum explicabo veritatis, dolorum nam. Atque.</p>
-            </div>
-        </div>
-
-        <!-- Slide 3 -->
-        <div class="carousel-item" style="background-image: url('https://via.placeholder.com/1500x800/7f7fff/333333');">
-            <div class="carousel-caption">
-                <h3>September 2024</h3>
-                <p>Start planning your private party today! Get in touch with us for more details on available dates, packages, and how we can help bring your vision to life.</p>
-            </div>
-        </div>
-
     </div>
-</div>
-
-<!-- Include Bootstrap JS (and jQuery for Bootstrap 4) -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.8/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-<!-- Optional: Intersection Observer to trigger carousel when visible -->
-<script is:inline>
-    document.addEventListener('DOMContentLoaded', function () {
-        const carousel = document.querySelector('#carouselExample');
-        let carouselVisible = false;
-
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    if (!carouselVisible) {
-                        $(carousel).carousel('cycle');
-                        carouselVisible = true;
-                    }
-                } else {
-                    $(carousel).carousel('pause');
-                    carouselVisible = false;
-                }
-            });
-        }, { threshold: 0.5 });
-
-        observer.observe(carousel);
-    });
-</script>
 
 </body>
 </html>

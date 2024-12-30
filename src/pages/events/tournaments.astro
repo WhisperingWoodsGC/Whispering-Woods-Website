@@ -1,8 +1,8 @@
 ---
 // Import header and footer to each page making it easier for the user to navigate between each page.
 import Mainlayout from "../../layouts/secondary-header.astro";
-
-import Testimonies from "../../components/testimonies.astro";
+// IMPORT THE COMPANIES PHONE/EMAIL TO STAY CONSISTANT ACROSS ALL PAGES.
+import PhoneEmail from "../../components/phone-email.astro";
 
 // Sets the company name.
 let companyname = 'Whispering Woods';
@@ -89,6 +89,8 @@ import ViewTransitions from "astro/components/ViewTransitions.astro";
             }
         }
     </style>
+
+    
     
     <body>
         
@@ -108,19 +110,23 @@ import ViewTransitions from "astro/components/ViewTransitions.astro";
                 <p>We offer full services and amenities to you no matter the occasion, including
                     food options, prizes, and a designated event planner.<br></p>
                 <p><b>Want to elevate your event?</b> Add our private upstairs party room for an
-                    exclusive sexperience for any occasion.</p>
+                    exclusive experience for any occasion.</p>
 
+                <br>
+
+                <!-- ! USED IFRAME TO IMPORT GOOGLE CALENDAR. A NEW CALENDAR IS USED FOR TOURNAMENTS. -->
+                <h6>Tournament Calendar:</h6>
+                <div class="row">
+                    <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FChicago&showPrint=0&showTz=0&showCalendars=0&showTabs=0&showTitle=0&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=Y181MzBkYmY2NWJkMzkyZjkzOTVkNjQzOTdmOWVjZTg2OTViNDQyMzRiMDM0OWRjNjZhZTllMjdhYmFlYTFhOWY4QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%2333B679&color=%234285F4" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>                </div>
+                    
                 <br>
 
                 <h6>Book your tournament today!</h6>
-                <p><i class="fa fa-phone"></i> <a href="tel:+1234567890">+1 (712) 366-4653</a><br>
-                <i class="fa fa-envelope"></i> <a href="mailto:proshop@thewoodsgc.com">proshop@thewoodsgc.com</a></p>
+                <!-- ! IMPORTS FROM "COMPONENTS/PHONE-EMAIL.ASTRO" SO STYLING IS CONSISTANT ACROSS THE BOARD. -->
+                <PhoneEmail />
                 
-
                 <br>
-
-            </div>
-                    
+                
         </Mainlayout>
         
     </body>

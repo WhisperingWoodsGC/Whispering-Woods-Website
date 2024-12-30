@@ -1,7 +1,6 @@
 ---
 // Import header and footer to each page making it easier for the user to navigate between each page.
 import Mainlayout from "../../layouts/secondary-header.astro";
-import PhoneEmail from "../../components/phone-email.astro";
 
 // Sets the company name.
 let companyname = 'Whispering Woods';
@@ -18,7 +17,7 @@ import ViewTransitions from "astro/components/ViewTransitions.astro";
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <!-- ! TAB TITLE. -->
-        <title>{companyname} - Private Events/Parties</title>
+        <title>{companyname} - Leagues</title>
 
         <ViewTransitions />
 
@@ -88,39 +87,47 @@ import ViewTransitions from "astro/components/ViewTransitions.astro";
             }
         }
     </style>
-    
+
     <body>
         
         <!-- ! IMPORTS THE MAIN LAYOUT FROM "../LAYOUTS/SECONDARY-LAYOUT.ASTRO"-->
         <Mainlayout>
 
-            <!-- ! DELETE THIS WHEN READY TO UPLOAD CONTENT. -->
             <div class="container">
                 <br>
-                <h4>The Perfect Space for Any Par-Tee!</h4>
+                <h4>Leagues:</h4>
                 <hr>
-                <h6>Host Your Next Event at Whispering Woods:</h6>
-                <p>Whispering Woods Golf Club is the perfect venue
-                    for your family reunion, birthday, or anniversary
-                    celebration. With a beautiful course, elegant
-                    clubhouse, and customizable event spaces, weʼll
-                    ensure your occasion is unforgettable.</p>
-
-                <br>
-
-                <h6>Pricing:</h6>
-                <p><b>2025 Room Rental Rates: <i>(4 hour min)</i></b><br>
-                <b>Sunday-Thrusday:</b> $100/Hour. <br> 
-                <b>Friday-Saturday:</b> $150/Hour.</p>
-
-                <br>
-
-                <h6>Contact us today to reserve your date!</h6>
-                <PhoneEmail />
                 
+                <h6>Monday Night League:</h6>
+                <p><b>Monday Nights Skins:</b></p>
+                <p><b></b></p>
+
+                <h6>Tuesday Night League:</h6>
+                <p><b>Ladies League:</b></p>
+                <p><b>Kiewit League:</b></p>
+
+                <h6>Wednesday Night League:</h6>
+                <p><b>Jon Gibbs League(2 Man Scramble):</b></p>
+
+
+                <h6>Thrusday Night League:</h6>
+                <p><b>Tom Holmes Memorial League:</b></p>
+
+                <h6>Friday Night League:</h6>
+                <p><b>Couples League:</b></p>
+
+
                 <br>
 
+                <!-- ! USED IFRAME TO IMPORT GOOGLE CALENDAR. A NEW CALENDAR IS USED FOR LEAGUES. -->
+                <h6>League Calendar:</h6>
+                <p><b><i>*Green: Front Nine*</i></b><br><b><i>*Blue: Back Nine*</i></b></p>
+                <div class="row">
+                    <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FChicago&showPrint=0&showTz=0&showCalendars=0&showTabs=0&showTitle=0&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=Y183MTJhZjg2ZDk3YmI1MzMwNTkyMDQyMWVjMTE3NTBlZGU5NThlMDdkNzI4NzhhN2I5MDc1MTNlMGRiNDcyYjVlQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%2333B679&color=%23F6BF26" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+                </div>
+                <br>
             </div>
+
                     
         </Mainlayout>
         
